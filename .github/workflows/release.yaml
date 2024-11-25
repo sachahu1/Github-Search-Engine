@@ -78,3 +78,15 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1.2.4
         with:
           workflow: Build And Release Docs
+
+  trigger-rebase:
+    runs-on: ubuntu-latest
+    needs:
+      - release
+    permissions:
+      actions: write
+    steps:
+      - name: Invoke rebase Workflow
+        uses: benc-uk/workflow-dispatch@v1.2.4
+        with:
+          workflow: Automatic Rebase
