@@ -1,0 +1,10 @@
+*
+**
+!docs
+!tests
+!github_search_engine
+!README.md
+!pyproject.toml
+!poetry.lock
+!.git
+!examples
