@@ -1,6 +1,53 @@
 # CHANGELOG
 
 
+## v0.2.0-rc.1 (2024-11-25)
+
+### Bug Fixes
+
+- Add conditional step for main branch in workflow
+  ([`2a761a5`](https://github.com/sachahu1/Github-Search-Engine/commit/2a761a570964b14d437ee3ec6ecb3e48044ccaf2))
+
+Include a conditional step to invoke the rebase Workflow only when on the main branch.
+
+### Build System
+
+- Improve docs deployment workflow
+  ([`e6c0b3d`](https://github.com/sachahu1/Github-Search-Engine/commit/e6c0b3dfb9321430b261cdcca80a37deb9ed8c2e))
+
+Sync updated documentation to S3 and remove redundant lines.
+
+### Features
+
+- Update version to "0.0.0"
+  ([`ac37b31`](https://github.com/sachahu1/Github-Search-Engine/commit/ac37b31afbfb5d47704b46897067c7646908ad67))
+
+Set the project version to "0.0.0" in the codebase and adjust version references accordingly for
+  semantic release configuration.
+
+- Add semantic release configuration
+  ([`29d16c0`](https://github.com/sachahu1/Github-Search-Engine/commit/29d16c0cb7e5eed4baec394a5373caf0fa6d679b))
+
+- Added version variables and TOML settings for semantic release - Configured branches for main,
+  dev, and feature releases
+
+- Add workflow_dispatch trigger for rebase job
+  ([`0a8e9b9`](https://github.com/sachahu1/Github-Search-Engine/commit/0a8e9b97f19116c0d2da46302c7288844927d4c5))
+
+Add a manual trigger for the rebase job using workflow_dispatch.
+
+- Add automatic rebase workflow
+  ([`c06ebfd`](https://github.com/sachahu1/Github-Search-Engine/commit/c06ebfdedb810c0a58386f469f502d50e98be5fa))
+
+- Added a GitHub Actions workflow for automatic rebasing of dev onto main branch.
+
+- Update workflow names and triggers
+  ([`68c7821`](https://github.com/sachahu1/Github-Search-Engine/commit/68c782173a2205a68739c33b725754cab0a2d4e5))
+
+- Renamed the release workflow to "Build And Release Docs" for clarity. - Changed the trigger to
+  manual dispatch instead of specific events.
+
+
 ## v0.1.0 (2024-11-25)
 
 ### Documentation
