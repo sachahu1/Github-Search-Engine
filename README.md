@@ -7,7 +7,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/sachahu1/Github-Search-Engine)
 
 ## Getting Started
-    
+
 To get started simply install the package:
 ```shell
 pip install git+https://github.com/sachahu1/Github-Search-Engine.git
