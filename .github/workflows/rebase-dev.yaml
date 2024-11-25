@@ -6,6 +6,8 @@ jobs:
   rebase:
     name: Rebase
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allows pushing changes to the repository
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
