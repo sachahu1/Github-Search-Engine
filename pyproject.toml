@@ -114,3 +114,29 @@ docstring-code-format = true
 name = "onnx"
 url = "https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/"
 priority = "supplemental"
+
+[tool.semantic_release]
+version_variables = [
+    "diffusion_models/__init__.py:__version__",
+    "docs/source/conf.py:release",
+    "docs/source/conf.py:html_context.current_version",
+]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+upload_to_pypi = false
+upload_to_release = true
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease = false
+
+[tool.semantic_release.branches.dev]
+match = "dev"
+prerelease = true
+prerelease_token = "rc"
+
+[tool.semantic_release.branches."feature/*"]
+match = "(feature/*)"
+prerelease = true
+prerelease_token = "alpha"
