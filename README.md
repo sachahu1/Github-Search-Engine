@@ -24,7 +24,7 @@ github_search_engine index <owner> <repository_name> --db_path=./local-store --g
 ```
 Then, search through any issue using:
 ```shell
-github_search_engine search <owner> <repository_name> "<Your query>"--db_path=./local-store --github_access_token=<Your GitHub Personal Access Token>
+github_search_engine search <owner> <repository_name> "<Your query>" --db_path=./local-store --github_access_token=<Your GitHub Personal Access Token>
 ```
 
 ### Launching an API server

@@ -26,7 +26,7 @@ copyright = "{% now 'utc', '%Y' %}, "
 author = "Sacha hu"
 
 # The full version, including alpha/beta/rc tags
-release = "0.2.1"
+release = "0.2.2-rc.1"
 
 source_suffix = {
   ".rst": "restructuredtext",
@@ -160,13 +160,13 @@ repo = git.Repo(search_parent_directories=True)
 versions = [
   (
     tag_ref.name,
-    f"https://sachahu.com/docs/github-search-engine/pages/{tag_ref.name}",
+    f"https://www.sachahu.com/docs/Github-Search-Engine/pages/{tag_ref.name}",
   )
   for tag_ref in git.Repo("../../").tags
 ]
 
 versions.append(
-  ("latest", "https://sachahu.com/docs/github-search-engine/latest")
+  ("latest", "https://www.sachahu.com/docs/Github-Search-Engine/latest")
 )
 
 html_context = {
