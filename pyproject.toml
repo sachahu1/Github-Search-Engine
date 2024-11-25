@@ -117,7 +117,7 @@ priority = "supplemental"
 
 [tool.semantic_release]
 version_variables = [
-    "diffusion_models/__init__.py:__version__",
+    "github_search_engine/__init__.py:__version__",
     "docs/source/conf.py:release",
     "docs/source/conf.py:html_context.current_version",
 ]
