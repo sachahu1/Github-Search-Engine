@@ -87,6 +87,7 @@ jobs:
       actions: write
     steps:
       - name: Invoke rebase Workflow
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: benc-uk/workflow-dispatch@v1.2.4
         with:
           workflow: Automatic Rebase
