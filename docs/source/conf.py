@@ -160,13 +160,13 @@ repo = git.Repo(search_parent_directories=True)
 versions = [
   (
     tag_ref.name,
-    f"https://sachahu.com/docs/github-search-engine/pages/{tag_ref.name}",
+    f"https://www.sachahu.com/docs/Github-Search-Engine/pages/{tag_ref.name}",
   )
   for tag_ref in git.Repo("../../").tags
 ]
 
 versions.append(
-  ("latest", "https://sachahu.com/docs/github-search-engine/latest")
+  ("latest", "https://www.sachahu.com/docs/Github-Search-Engine/latest")
 )
 
 html_context = {
