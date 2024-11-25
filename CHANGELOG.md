@@ -1,6 +1,23 @@
 # CHANGELOG
 
 
+## v0.2.1-rc.1 (2024-11-25)
+
+### Bug Fixes
+
+- Add step to fetch all history for accurate rebasing
+  ([`eb9daf6`](https://github.com/sachahu1/Github-Search-Engine/commit/eb9daf60b0fdc6974f8d9951290e274d1dd4511d))
+
+Include a new step in the workflow to checkout repository with full history for precise rebasing.
+
+### Build System
+
+- Update AWS S3 upload URLs in workflow file
+  ([`03eb832`](https://github.com/sachahu1/Github-Search-Engine/commit/03eb832bb9bf67553b7b4dde876e0bfa1837d0a1))
+
+Update the AWS S3 upload URLs to use the correct environment variable for documentation uploads.
+
+
 ## v0.2.0 (2024-11-25)
 
 
