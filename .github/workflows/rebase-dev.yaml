@@ -1,0 +1,26 @@
+name: Automatic Rebase
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebase:
+    name: Rebase
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git for GITHUB_TOKEN
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Authenticate with GITHUB_TOKEN
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+    - name: Rebase dev onto main
+      run: |
+        git checkout dev
+        git fetch origin main
+        git rebase origin/main
+        git push --force-with-lease
