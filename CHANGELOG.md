@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v0.2.2-rc.1 (2024-11-25)
+
+### Bug Fixes
+
+- Add write permissions for repository changes
+  ([`45aea58`](https://github.com/sachahu1/Github-Search-Engine/commit/45aea585a02263669d690bbfda72f4369541a2a0))
+
+Added permissions to allow pushing changes to the repository.
+
+- Add in-memory storage option to GithubSearchEngine
+  ([`7a83938`](https://github.com/sachahu1/Github-Search-Engine/commit/7a83938848c324f6228180239cf7e06690ea5ed2))
+
+Initialize GithubSearchEngine with an optional in-memory storage location.
+
+- Add examples.rst, update documentation URLs
+  ([`a2adc30`](https://github.com/sachahu1/Github-Search-Engine/commit/a2adc3052e960203db3fed64ab4ae2debdc10c5d))
+
+Added examples.rst for code examples. Updated documentation URLs to use correct capitalization and
+  domain.
+
+
 ## v0.2.1 (2024-11-25)
 
 

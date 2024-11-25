@@ -26,7 +26,7 @@ copyright = "{% now 'utc', '%Y' %}, "
 author = "Sacha hu"
 
 # The full version, including alpha/beta/rc tags
-release = "0.2.1"
+release = "0.2.2-rc.1"
 
 source_suffix = {
   ".rst": "restructuredtext",
