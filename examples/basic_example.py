@@ -20,7 +20,9 @@ def run(
   repository_name: str,
   query: str,
 ):
-  github_search_engine = GithubSearchEngine(github_access_token)
+  github_search_engine = GithubSearchEngine(
+    github_access_token, qdrant_location=":memory:"
+  )
 
   asyncio.run(github_search_engine.index_repository(owner, repository_name))
   results = github_search_engine.search(owner, repository_name, query)

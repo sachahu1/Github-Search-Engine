@@ -9,7 +9,7 @@ packages = [
 readme = "README.md"
 maintainers = ["Sacha hu <hu.sacha.ai@gmail.com>"]
 repository = "https://github.com/sachahu1/Github-Search-Engine"
-documentation = "https://sachahu.com/docs/github-search-engine/latest/index.html"
+documentation = "https://www.sachahu.com/docs/Github-Search-Engine/latest/index.html"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
