@@ -8,17 +8,42 @@
 
 ## Getting Started
 
-To get started simply install the package:
+### Installation
+
+#### Installing the package (from PyPI)
+You can install this package from PyPI using:
+```shell
+pip install Github-Search-Engine[cpu]
+```
+You can also choose to install extras:
+```shell
+pip install Github-Search-Engine[gpu,api]
+```
+
+#### Installing the package (from source)
+You can install this package from source using:
 ```shell
 pip install git+https://github.com/sachahu1/Github-Search-Engine.git
 ```
-You can then start using the tool with the CLI:
+
+#### Installing the package (Manual)
+You can also install the package yourself by cloning the repo:
 ```shell
-github_search_engine
+git clone https://github.com/sachahu1/Github-Search-Engine.git
+```
+
+And installing the package with poetry:
+```shell
+poetry install
 ```
 
 ### Using as a CLI tool
-You can use this package as a CLI tool, to do that, start by indexing your favourite GitHub repository:
+You can use this package as a CLI tool, start with:
+```shell
+github_search_engine -h
+```
+
+Once you're more familiar with the CLI, you can index your favourite GitHub repository:
 ```shell
 github_search_engine index <owner> <repository_name> --db_path=./local-store --github_access_token=<Your GitHub Personal Access Token>
 ```
