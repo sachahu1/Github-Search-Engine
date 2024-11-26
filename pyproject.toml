@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Github-Search-Engine"
-version = "0.2.3-rc.1"
+version = "0.2.3"
 description = "Search through github issues and PRs like never before."
 authors = ["Sacha hu <hu.sacha.ai@gmail.com>"]
 packages = [
