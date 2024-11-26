@@ -1,30 +1,83 @@
-# Introduction
+# Github-Search-Engine
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sachahu1/Github-Search-Engine/run-tests.yaml?branch=main&label=Tests)
 
-## Installation
-### Installing Poetry
-This tool uses poetry. If you already have poetry installed,
-please skip to the next section. Otherwise, let's first setup poetry.
+![GitHub Release](https://img.shields.io/github/v/release/sachahu1/Github-Search-Engine)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/github_search_engine)
+![GitHub Repo stars](https://img.shields.io/github/stars/sachahu1/Github-Search-Engine)
 
-To install poetry, simply run this command:
+## Getting Started
+
+### Installation
+
+#### Installing the package (from PyPI)
+You can install this package from PyPI using:
 ```shell
-curl -sSL https://install.python-poetry.org | python3 -
+pip install Github-Search-Engine[cpu]
 ```
-You can find out more about poetry installation [here](https://python-poetry.org/docs/master/#installation).
+You can also choose to install extras:
+```shell
+pip install Github-Search-Engine[gpu,api]
+```
 
-That's it, poetry is set up.
+#### Installing the package (from source)
+You can install this package from source using:
+```shell
+pip install git+https://github.com/sachahu1/Github-Search-Engine.git
+```
 
-### Installing the package
-Thanks to poetry, installing this package is very simple and can be done in a single command. Simply run:
+#### Installing the package (Manual)
+You can also install the package yourself by cloning the repo:
+```shell
+git clone https://github.com/sachahu1/Github-Search-Engine.git
+```
+
+And installing the package with poetry:
 ```shell
 poetry install
 ```
-That's it, the package is installed. Move to the next section to learn how to use this package.
 
-## Getting Started
-< Add instructions on how to use project here >
+### Using as a CLI tool
+You can use this package as a CLI tool, start with:
+```shell
+github_search_engine -h
+```
+
+Once you're more familiar with the CLI, you can index your favourite GitHub repository:
+```shell
+github_search_engine index <owner> <repository_name> --db_path=./local-store --github_access_token=<Your GitHub Personal Access Token>
+```
+Then, search through any issue using:
+```shell
+github_search_engine search <owner> <repository_name> "<Your query>" --db_path=./local-store --github_access_token=<Your GitHub Personal Access Token>
+```
+
+### Launching an API server
+You can use this package as an API. To do that, simply run:
+```shell
+github_search_engine api --github_access_token=<Your GitHub Personal Access Token>
+```
+
 ## Building the documentation
-To build the documentation you can simply use the docker image. To do so, simply run:
+### Using Docker
+To access the documentation locally, the easiest way is to use the docker image. To do so, simply run:
 ```shell
 docker build . -f Dockerfile --target documentation -t github_search_engine-docs
+docker run -p 80:80 -it github_search_engine-docs
+```
+Then navigate to [http://localhost](http://localhost)
+
+### Manually
+Alternatively you can build the documentation yourself.
+First, make sure you have the dependencies installed:
+```shell
+poetry install --with=documentation
+```
+Then build the documentation:
+```shell
+poetry run sphinx-build -M html docs/source/ docs/build
+```
+Then open the documentation in your browser:
+```shell
+open docs/build/html/index.html
 ```

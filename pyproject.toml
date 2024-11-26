@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Github-Search-Engine"
-version = "0.2.3"
+version = "0.3.0-rc.1"
 description = "Search through github issues and PRs like never before."
 authors = ["Sacha hu <hu.sacha.ai@gmail.com>"]
 packages = [
@@ -71,7 +71,7 @@ testpaths = ["tests"]
 source = ["github_search_engine"]
 
 [tool.poetry.scripts]
-github_search_engine = "github_search_engine.cli:run"
+github_search_engine = "github_search_engine.cli:_run"
 
 [tool.ruff]
 line-length = 79
