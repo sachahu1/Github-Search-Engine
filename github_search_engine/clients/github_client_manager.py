@@ -1,5 +1,3 @@
-from typing import List
-
 from githubkit import GitHub
 from githubkit.versions.v2022_11_28.models import Issue
 from githubkit.versions.v2022_11_28.models import IssueComment
@@ -21,7 +19,7 @@ class GithubClientManager:
 
   async def get_repository_issues(
     self, owner: str, repository_name: str
-  ) -> List[Issue]:
+  ) -> list[Issue]:
     """Retrieve issues from a specified GitHub repository.
 
     This function connects to a given GitHub repository and retrieves a list of
@@ -51,7 +49,7 @@ class GithubClientManager:
 
   def get_issue_comments(
     self, owner: str, repository_name: str, issue_number: int
-  ) -> List[IssueComment]:
+  ) -> list[IssueComment]:
     """Retrieve comments for a specific issue in a repository.
 
     Args:
@@ -73,7 +71,7 @@ class GithubClientManager:
     owner: str,
     repository_name: str,
     issue_number: int,
-  ) -> List[TimelineCrossReferencedEvent]:
+  ) -> list[TimelineCrossReferencedEvent]:
     """Fetch mentions to a given issue.
 
     Fetches the timeline events for a specific issue and filters out the

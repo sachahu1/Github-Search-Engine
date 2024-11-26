@@ -1,6 +1,5 @@
 import os
 from contextlib import asynccontextmanager
-from typing import Optional
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -8,7 +7,7 @@ from pydantic import BaseModel
 from github_search_engine.github_search_engine import GithubSearchEngine
 
 
-search_engine: Optional[GithubSearchEngine] = None
+search_engine: GithubSearchEngine | None = None
 
 
 class Repository(BaseModel):

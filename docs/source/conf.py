@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.abspath("../../"))
 # -- Project information -----------------------------------------------------
 
 project = "Github-Search-Engine"
-copyright = "{% now 'utc', '%Y' %}, "
+copyright = "2024, Sacha Hu"
 author = "Sacha hu"
 
 # The full version, including alpha/beta/rc tags
