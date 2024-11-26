@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Github-Search-Engine"
-version = "0.2.2"
+version = "0.2.3-rc.1"
 description = "Search through github issues and PRs like never before."
 authors = ["Sacha hu <hu.sacha.ai@gmail.com>"]
 packages = [
@@ -15,11 +15,20 @@ documentation = "https://www.sachahu.com/docs/Github-Search-Engine/latest/index.
 python = ">=3.10,<3.14"
 ollama = "^0.4.0"
 githubkit = "^0.11.14"
-qdrant-client = {extras = ["fastembed-gpu"], version = "^1.12.1"}
-onnxruntime-gpu = {version = "^1.19.2", source = "onnx"}
+qdrant-client = [
+    {extras = ["fastembed"], markers = "extra == 'cpu'", version = "^1.12.1", optional = true},
+    {extras = ["fastembed-gpu"], markers = "extra == 'gpu'", version = "^1.12.1", optional = true}
+]
+onnxruntime-gpu = {version = "^1.19.2", source = "onnx", optional = true}
 chevron = "^0.14.0"
 cleo = "^2.1.0"
 python-dotenv = "^1.0.1"
+fastapi = {extras = ["standard"], version = "^0.115.5", optional = true}
+
+[tool.poetry.extras]
+api = ["fastapi"]
+cpu = ["qdrant-client"]
+gpu = ["onnxruntime-gpu", "qdrant-client"]
 
 [tool.poetry.group.dev]
 optional = true
@@ -48,9 +57,6 @@ sphinx-copybutton = "^0.5.2"
 sphinx-autoapi = "^3.2.1"
 gitpython = "^3.1.43"
 
-
-[tool.poetry.group.api.dependencies]
-fastapi = {extras = ["standard"], version = "^0.115.5"}
 
 [build-system]
 requires = ["poetry-core"]

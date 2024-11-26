@@ -1,6 +1,22 @@
 # CHANGELOG
 
 
+## v0.2.3-rc.1 (2024-11-26)
+
+### Bug Fixes
+
+- Update multiple packages to optional status
+  ([`174b8b1`](https://github.com/sachahu1/Github-Search-Engine/commit/174b8b173e03e1e56b0fb6ad0d58b1482c5a2e4f))
+
+Changed several packages from mandatory to optional status in the lock file. This aligns with the
+  flexibility of package dependencies and usage.
+
+- Add onnxruntime provider for model execution
+  ([`7a59625`](https://github.com/sachahu1/Github-Search-Engine/commit/7a5962566424700aaab1b22ea2c9589011753357))
+
+Imported onnxruntime and updated model providers.
+
+
 ## v0.2.2 (2024-11-25)
 
 
