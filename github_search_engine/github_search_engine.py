@@ -5,6 +5,7 @@ from typing import List
 from typing import Optional
 
 import chevron
+import onnxruntime
 from githubkit.versions.v2022_11_28.models import Issue
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import QueryResponse
@@ -35,7 +36,7 @@ class GithubSearchEngine:
 
     self._database_client.set_model(
       "snowflake/snowflake-arctic-embed-m",
-      providers=["CUDAExecutionProvider", "CPUExecutionProvider"],
+      providers=onnxruntime.get_available_providers(),
     )
 
   @staticmethod
@@ -90,7 +91,7 @@ class GithubSearchEngine:
       )
       summary = f"""
       # Issue [#{issue.metadata["number"]}]({issue.metadata["html_url"]})
-      
+
       {summary}
       """
       summaries.append(inspect.cleandoc(summary))
