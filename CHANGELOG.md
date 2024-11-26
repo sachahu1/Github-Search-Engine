@@ -1,6 +1,18 @@
 # CHANGELOG
 
 
+## v0.3.0-rc.1 (2024-11-26)
+
+### Features
+
+- Improve installation instructions and update project info
+  ([`a47b410`](https://github.com/sachahu1/Github-Search-Engine/commit/a47b410a0694e0617af1360bc865880e4f6f2f57))
+
+- Added detailed installation steps for PyPI, source, and manual methods - Updated project
+  information in documentation - Enhanced API server launch instructions - Refactored code for
+  better readability and maintainability
+
+
 ## v0.2.3 (2024-11-26)
 
 
